@@ -2,17 +2,22 @@ import math
 import random
 import matplotlib.pyplot as plt
 
-lamb = 8/24
+lamb = int(input("Введите среднее количество изделий(за сутки): "))
+while lamb <= 0:
+    print("Значение должно быть положительным. Попробуйте еще раз.")
+    lamb = int(input("Введите среднее количество изделий(за сутки): "))
+
+lamb = lamb / 24
 Tn = 100
-t=0
-N=0
-t_mas=[]
-N_mas=[]
-t_all = [i for i in range(Tn+1)]
+t = 0
+N = 0
+t_mas = []
+N_mas = []
+t_all = [i for i in range(Tn + 1)]
 
 while t <= Tn:
     r = random.random()
-    tau = -1/lamb * math.log(r)
+    tau = -1 / lamb * math.log(r)
     t = t + tau
     N = N + 1
 
@@ -33,4 +38,3 @@ cell_text = [['t', 'N']] + [[str(t_mas[i]), str(N_mas[i])] for i in range(len(t_
 plt.table(cellText=cell_text, loc='right')
 
 plt.show()
-
