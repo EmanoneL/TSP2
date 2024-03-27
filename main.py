@@ -1,24 +1,12 @@
-import math
-import random
-import matplotlib.pyplot as plt
+# This is a sample Python script.
 
-lamb = 8/24
-Tn = 100
-t=0
-N=0
-t_mas=[]
-N_mas=[]
-t_all = [i for i in range(Tn+1)]
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-while t <= Tn:
-    r = random.random()
-    tau = -1/lamb * math.log(r)
-    t = t + tau
-    N = N + 1
 
-    t_mas.append(t)
-    N_mas.append(N)
-
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
 
