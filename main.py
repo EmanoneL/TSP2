@@ -19,6 +19,8 @@ while t <= Tn:
     t_mas.append(t)
     N_mas.append(N)
 
+plt.figure(figsize=(8, 6))
+plt.plot(t_mas, N_mas, color='blue')
 
-
+plt.show()
 
