@@ -19,8 +19,18 @@ while t <= Tn:
     t_mas.append(t)
     N_mas.append(N)
 
-plt.figure(figsize=(8, 6))
-plt.plot(t_mas, N_mas, color='blue')
+fig = plt.figure(figsize=(14, 5))
+ax = fig.add_subplot()
+ax.step(t_mas, N_mas)
+ax.grid()
+
+plt.title('Пуассоновский поток событий')
+plt.xlabel('Время, t')
+plt.ylabel('Количество деталей, N')
+
+cell_text = [['t', 'N']] + [[str(t_mas[i]), str(N_mas[i])] for i in range(len(t_mas))]
+
+plt.table(cellText=cell_text, loc='right')
 
 plt.show()
 
